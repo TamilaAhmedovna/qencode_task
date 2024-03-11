@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import './SigninWithButton.css';
+import { ButtonStyled } from './SigninWithButton.styles';
 
 type Props = {
   icon: ReactNode;
@@ -10,12 +10,10 @@ function SigninWithButton(props: Props) {
   const { icon, label } = props
 
   return (
-    <div>
-      <button>
-        {icon}
-        {label}
-      </button>
-    </div>
+    <ButtonStyled variant='outlined'>
+      {icon}
+      {label}
+    </ButtonStyled>
   );
 }
 
